@@ -1,0 +1,164 @@
+body {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+
+.legend {
+
+}
+.legend ul {
+  display: block;
+  margin: 0 auto 50px;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  list-style-type: none;
+}
+.legend ul li {
+  display: inline;
+  text-align: center;
+  margin:20px 10px;
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.legend ul li:before {
+  content: "";
+  width:50px;
+  height: 15px;
+  margin-right: 5px;
+  display:inline-block;
+  vertical-align: middle;
+}
+.legend ul li.blue:before {
+  background-color: #00b0f0;
+}
+.legend ul li.green:before {
+  background-color: #13DB6B;
+}
+.legend ul li.lightblue:before {
+  background-color: #b4e0f0;
+}
+.charts {
+  display: block;
+  width: 100%;
+}
+.charts:before, .charts:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.charts .chart_1, .charts .chart_2 {
+  display: inline-block;
+  float:left;
+  width: calc(50% - 60px);
+}
+.charts .chart_3 {
+  display: inline-block;
+  width: 120px;
+}
+.charts .chart_3 h3 {
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 700;
+  margin: 6px 0 22px;
+}
+.charts .chart_3 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.charts .chart_3 ul li {
+  color: #222;
+  font-size: 18px;
+  line-height: 44px;
+  border-bottom: 1px solid #F2F2F2;
+}
+.charts .chart_3 ul li.negative {
+  color: #d72820;
+}
+
+.chartInfo > div {
+  display: none;
+}
+
+p.small {
+  display: block;
+  margin: 40px 0 20px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+
+
+.primary-map a path.florida, .primary-map a path.texas, .primary-map a path.northeast, .primary-map a path.western {
+  fill:#00b0f0;
+  stroke:transparent;
+  opacity:.10;
+}
+.primary-map a:hover path.florida, .primary-map a:hover path.texas, .primary-map a:hover path.northeast, .primary-map a:hover path.western {
+  fill:#00b0f0;
+  stroke:#fff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:0.75;
+  isolation:isolate;
+}
+
+.primary-map a g.reliabilityFirst path, .primary-map a g.reliabilityFirst polyline {
+  fill:#00b0f0;
+  stroke: transparent;
+  opacity:.10;
+}
+.primary-map a:hover g.reliabilityFirst path {
+  fill:#00b0f0;
+  stroke: #fff;
+  opacity:0.75;
+}
+.primary-map a:hover g.reliabilityFirst polyline {
+  fill:#00b0f0;
+  stroke: #fff;
+  opacity:0.75;
+}
+
+
+ .primary-map a g.southeast_1 path, .primary-map a g.southwest path, .primary-map a g.midwest path {
+  fill:#00b0f0;
+  stroke:transparent;
+  opacity:.10;
+}
+.primary-map a g.southeast_1 polyline {
+  fill:transparent;
+}
+
+.primary-map a:hover g.southeast_1 path, .primary-map a:hover g.southwest path, .primary-map a:hover g.midwest path {
+  fill:#00b0f0;
+  stroke:#fff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:0.75;
+  isolation:isolate;
+}
+
+a #middle-group {
+  fill:transparent;
+  stroke: transparent;
+}
+a:hover #middle-group, a.active #middle-group {
+  fill: #80d7f7;
+  stroke: #fff;
+}
+
+.primary-map a.active path, .primary-map a.active g path {
+  fill:#00b0f0;
+  stroke:#fff;
+  opacity:.75;
+}

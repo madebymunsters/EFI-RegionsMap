@@ -1,5 +1,5 @@
 body {
-  width: 50%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
   font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
@@ -9,27 +9,15 @@ h1 {
   font-weight: 700;
 }
 
-
-.legend {
-
-}
 .legend ul {
-  display: block;
-  margin: 0 auto 50px;
-  padding: 0;
-  text-align: center;
-  width: 100%;
-  list-style-type: none;
+  display:block;
+  text-align: left;
 }
 .legend ul li {
-  display: inline;
-  text-align: center;
-  margin:20px 10px;
-  position: relative;
-  font-size: 14px;
-  font-weight: 400;
+  display: block;
+  text-align: left;
+  margin-bottom: 10px;
 }
-
 .legend ul li:before {
   content: "";
   width:50px;
@@ -47,6 +35,133 @@ h1 {
 .legend ul li.lightblue:before {
   background-color: #b4e0f0;
 }
+
+p.small {
+  display: block;
+  margin: 40px 0 20px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+
+/****************** MAP STYLES ******************/
+.primary-map a path.florida, .primary-map a path.texas, .primary-map a path.northeast, .primary-map a path.western {
+  fill:#00b0f0;
+  stroke:transparent;
+  opacity:.10;
+}
+.primary-map a:hover path.florida, .primary-map a:hover path.texas, .primary-map a:hover path.northeast, .primary-map a:hover path.western {
+  fill:#00b0f0;
+  stroke:#fff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:0.75;
+  isolation:isolate;
+}
+
+.primary-map a g.reliabilityFirst path, .primary-map a g.reliabilityFirst polyline {
+  fill:#00b0f0;
+  stroke: transparent;
+  opacity:.10;
+}
+.primary-map a:hover g.reliabilityFirst path {
+  fill:#00b0f0;
+  stroke: #fff;
+  opacity:0.75;
+}
+.primary-map a:hover g.reliabilityFirst polyline {
+  fill:#00b0f0;
+  stroke: #fff;
+  opacity:0.75;
+}
+
+.primary-map a g.southeast_1 path, .primary-map a g.southwest path, .primary-map a g.midwest path {
+  fill:#00b0f0;
+  stroke:transparent;
+  opacity:.10;
+}
+.primary-map a g.southeast_1 polyline {
+  fill:transparent;
+}
+.primary-map a g.midwest polyline {
+  fill:transparent;
+  stroke: transparent;
+}
+.primary-map a:hover g.midwest polyline, .primary-map a.active g.midwest polyline  {
+  fill:#f2f2f2;
+  stroke: #fff;
+}
+
+.primary-map a:hover g.southeast_1 path, .primary-map a:hover g.southwest path, .primary-map a:hover g.midwest path {
+  fill:#00b0f0;
+  stroke:#fff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:0.75;
+  isolation:isolate;
+}
+
+a #middle-group {
+  fill:transparent;
+  stroke: transparent;
+}
+a:hover #middle-group, a.active #middle-group {
+  fill: #80d7f7;
+  stroke: #fff;
+}
+
+.primary-map a.active path, .primary-map a.active g path {
+  fill:#00b0f0;
+  stroke:#fff;
+  opacity:.75;
+}
+
+.primary-map a {
+  position: relative;
+}
+.primary-map a div.overlay {
+  display: none;
+}
+.primary-map a:hover div.overlay {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  width: 300px;
+  background: white;
+  color: black;
+}
+
+/****************** TABLET AND UP ******************/
+@media screen and (min-width:768px) {
+  .legend ul {
+    display: block;
+    margin: 0 auto 50px;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    list-style-type: none;
+  }
+  .legend ul li {
+    display: inline;
+    text-align: center;
+    margin:20px 10px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+/****************** LARGE COMPUTERS ******************/
+@media screen and (min-width: 1440px) {
+  body {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+}
+
 .charts {
   display: block;
   width: 100%;
@@ -88,85 +203,4 @@ h1 {
 
 .chartInfo > div {
   display: none;
-}
-
-p.small {
-  display: block;
-  margin: 40px 0 20px;
-  font-size: 12px;
-  font-style: italic;
-}
-
-
-
-.primary-map a path.florida, .primary-map a path.texas, .primary-map a path.northeast, .primary-map a path.western {
-  fill:#00b0f0;
-  stroke:transparent;
-  opacity:.10;
-}
-.primary-map a:hover path.florida, .primary-map a:hover path.texas, .primary-map a:hover path.northeast, .primary-map a:hover path.western {
-  fill:#00b0f0;
-  stroke:#fff;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-  opacity:0.75;
-  isolation:isolate;
-}
-
-.primary-map a g.reliabilityFirst path, .primary-map a g.reliabilityFirst polyline {
-  fill:#00b0f0;
-  stroke: transparent;
-  opacity:.10;
-}
-.primary-map a:hover g.reliabilityFirst path {
-  fill:#00b0f0;
-  stroke: #fff;
-  opacity:0.75;
-}
-.primary-map a:hover g.reliabilityFirst polyline {
-  fill:#00b0f0;
-  stroke: #fff;
-  opacity:0.75;
-}
-
-
- .primary-map a g.southeast_1 path, .primary-map a g.southwest path, .primary-map a g.midwest path {
-  fill:#00b0f0;
-  stroke:transparent;
-  opacity:.10;
-}
-.primary-map a g.southeast_1 polyline {
-  fill:transparent;
-}
-.primary-map a g.midwest polyline {
-  fill:transparent;
-  stroke: transparent;
-}
-.primary-map a:hover g.midwest polyline, .primary-map a.active g.midwest polyline  {
-  fill:#f2f2f2;
-  stroke: #fff;
-}
-
-.primary-map a:hover g.southeast_1 path, .primary-map a:hover g.southwest path, .primary-map a:hover g.midwest path {
-  fill:#00b0f0;
-  stroke:#fff;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-  opacity:0.75;
-  isolation:isolate;
-}
-
-a #middle-group {
-  fill:transparent;
-  stroke: transparent;
-}
-a:hover #middle-group, a.active #middle-group {
-  fill: #80d7f7;
-  stroke: #fff;
-}
-
-.primary-map a.active path, .primary-map a.active g path {
-  fill:#00b0f0;
-  stroke:#fff;
-  opacity:.75;
 }

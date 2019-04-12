@@ -132,6 +132,55 @@ a:hover #middle-group, a.active #middle-group {
   background: white;
   color: black;
 }
+.charts .chart_1 {
+  display: none;
+}
+.charts .chart_1_mobile {
+  display:block;
+  width:100%;
+}
+.charts .chart_2 {
+  display: block;
+  width: 100%;
+}
+.charts .chart_3 {
+  display: block;
+  width: 100%;
+}
+.charts .chart_3 h3 {
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 700;
+  margin: 6px 0 22px 90px;
+  text-align:left;
+}
+.charts .chart_3 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.charts .chart_3 ul li {
+  color: #222;
+  font-size: 18px;
+  line-height: 44px;
+  border-bottom: 1px solid #F2F2F2;
+  text-align: left;
+}
+.charts .chart_3 ul li.negative {
+  color: #d72820;
+}
+.charts .chart_3 ul li span {
+  color: #222;
+  font-size: 14px;
+  text-align: center;
+  float: left;
+  width: 80px;
+  font-weight: 700;
+  margin-right: 30px;
+}
+.charts .chart_3 ul li.negative > span {
+  color:#222;
+}
 
 /****************** TABLET AND UP ******************/
 @media screen and (min-width:768px) {
@@ -151,8 +200,53 @@ a:hover #middle-group, a.active #middle-group {
     font-size: 14px;
     font-weight: 400;
   }
+  .charts {
+    display: block;
+    width: 100%;
+  }
+  .charts:before, .charts:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .charts .chart_1_mobile {
+    display: none;
+  }
+  .charts .chart_1 {
+    display: inline-block;
+    float:left;
+    width: calc(50% - 105px);
+  }
+  .charts .chart_2 {
+    display: inline-block;
+    float:left;
+    width: calc(50% - 20px);
+  }
+  .charts .chart_3 {
+    display: inline-block;
+    width: 120px;
+  }
+  .charts .chart_3 h3 {
+    font-size: 17px;
+    line-height: 21px;
+    font-weight: 700;
+    margin: 6px 0 22px;
+    text-align: center;
+  }
+  .charts .chart_3 ul li {
+    text-align: center;
+  }
+  .charts .chart_3 ul li span {
+    display: none;
+  }
 }
-
+/****************** LAPTOPS ******************/
+@media screen and (min-width: 1280px) {
+  .primary-map {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 /****************** LARGE COMPUTERS ******************/
 @media screen and (min-width: 1440px) {
   body {
@@ -162,44 +256,7 @@ a:hover #middle-group, a.active #middle-group {
 
 }
 
-.charts {
-  display: block;
-  width: 100%;
-}
-.charts:before, .charts:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.charts .chart_1, .charts .chart_2 {
-  display: inline-block;
-  float:left;
-  width: calc(50% - 60px);
-}
-.charts .chart_3 {
-  display: inline-block;
-  width: 120px;
-}
-.charts .chart_3 h3 {
-  font-size: 17px;
-  line-height: 21px;
-  font-weight: 700;
-  margin: 6px 0 22px;
-}
-.charts .chart_3 ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.charts .chart_3 ul li {
-  color: #222;
-  font-size: 18px;
-  line-height: 44px;
-  border-bottom: 1px solid #F2F2F2;
-}
-.charts .chart_3 ul li.negative {
-  color: #d72820;
-}
+
 
 .chartInfo > div {
   display: none;

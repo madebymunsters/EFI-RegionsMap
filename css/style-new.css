@@ -257,6 +257,33 @@ a:hover #middle-group, a.active #middle-group {
   }
 }
 /****************** SMALL LAPTOPS ******************/
+@media screen and (min-width: 1024px) {
+  .map {
+    width: 40%;
+    margin: 0 auto;
+    float: left;
+  }
+  .primary-map {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .chartInfo {
+    width:60%;
+    margin: 0 auto;
+    float: left;
+    text-align: left;
+  }
+  p.small {
+    margin: 0 auto;
+  }
+  footer:before, footer:after {
+    content: '';
+    display: table;
+    clear: both;
+    margin: 40px 0;
+  }
+}
+/****************** SMALL LAPTOPS ******************/
 @media screen and (min-width: 1280px) {
   .map {
     width: 50%;
@@ -272,15 +299,6 @@ a:hover #middle-group, a.active #middle-group {
     margin: 0 auto;
     float: left;
     text-align: left;
-  }
-  p.small {
-    margin: 0 auto;
-  }
-  footer:before, footer:after {
-    content: '';
-    display: table;
-    clear: both;
-    margin: 40px 0;
   }
 }
 /****************** LAPTOPS ******************/

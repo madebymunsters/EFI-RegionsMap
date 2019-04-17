@@ -12,6 +12,9 @@ h1 {
 .legend ul {
   display:block;
   text-align: left;
+  margin:10px auto;
+  padding: 0;
+  width: 95%;
 }
 .legend ul li {
   display: block;
@@ -198,17 +201,20 @@ a:hover #middle-group, a.active #middle-group {
     display: block;
     margin: 0 auto 50px;
     padding: 0;
-    text-align: center;
+    text-align: left;
     width: 100%;
     list-style-type: none;
   }
   .legend ul li {
-    display: inline;
-    text-align: center;
-    margin:20px 10px;
+    display: block;
+    text-align: left;
+    margin:10px 0px;
     position: relative;
     font-size: 14px;
     font-weight: 400;
+  }
+  .legend ul li:first-child {
+    margin-left: 0;
   }
   .charts {
     display: block;
@@ -250,7 +256,7 @@ a:hover #middle-group, a.active #middle-group {
     display: none;
   }
 }
-/****************** LAPTOPS ******************/
+/****************** SMALL LAPTOPS ******************/
 @media screen and (min-width: 1280px) {
   .map {
     width: 50%;
@@ -277,7 +283,7 @@ a:hover #middle-group, a.active #middle-group {
     margin: 40px 0;
   }
 }
-/****************** LARGE COMPUTERS ******************/
+/****************** LAPTOPS ******************/
 @media screen and (min-width: 1440px) {
   /* body {
     width: 60%;
@@ -286,8 +292,23 @@ a:hover #middle-group, a.active #middle-group {
   .map {
     width: 60%;
   }
-.chartInfo {
+  .chartInfo {
     width:40%;
+  }
+}
+
+/***************** LARGER COMPUTERS *******************/
+@media screen and (min-width: 1600px) {
+  .legend ul li {
+    display: inline;
+    text-align: left;
+    margin:20px 10px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .legend ul li:first-child {
+    margin-left: 0;
   }
 }
 

@@ -268,7 +268,7 @@ a:hover #middle-group, a.active #middle-group {
   }
 }
 /****************** SMALL LAPTOPS ******************/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 800px) {
   .map {
     width: 40%;
     margin: 0 auto;
@@ -292,6 +292,10 @@ a:hover #middle-group, a.active #middle-group {
     display: table;
     clear: both;
     margin: 40px 0;
+  }
+  .charts .chart_3 ul li {
+    font-size: 16px;
+    line-height: 41px;
   }
 }
 /****************** SMALL LAPTOPS ******************/
@@ -344,5 +348,9 @@ a:hover #middle-group, a.active #middle-group {
   }
   .legend ul li:first-child {
     margin-left: 0;
+  }
+  .charts .chart_3 ul li {
+    font-size: 18px;
+    line-height: 44px;
   }
 }

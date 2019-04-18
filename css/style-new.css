@@ -56,6 +56,17 @@ footer p {
   font-size: 12px;
 }
 
+.regionInfo {
+  display: none;
+}
+.chartInfo > div, .regionInfoMap > div {
+  display: none;
+}
+.regionInfoMap {
+  text-align: center;
+}
+
+
 
 /****************** MAP STYLES ******************/
 .primary-map a path.florida, .primary-map a path.texas, .primary-map a path.northeast, .primary-map a path.western {
@@ -313,6 +324,12 @@ a:hover #middle-group, a.active #middle-group {
   .chartInfo {
     width:40%;
   }
+  .regionInfo {
+    display: block;
+  }
+  .regionInfoMap {
+    display: none;
+  }
 }
 
 /***************** LARGER COMPUTERS *******************/
@@ -328,10 +345,4 @@ a:hover #middle-group, a.active #middle-group {
   .legend ul li:first-child {
     margin-left: 0;
   }
-}
-
-
-
-.chartInfo > div {
-  display: none;
 }

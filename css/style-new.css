@@ -7,9 +7,11 @@ body {
 
 h1 {
   font-weight: 700;
+  font-size: 1.5em;
+  color: #44C1F1;
 }
 h4 {
-  margin: 10px 0 -40px;
+  margin: 10px 0 -20px;
 }
 
 .legend ul {

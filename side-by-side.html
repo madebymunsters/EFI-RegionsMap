@@ -8,6 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style-new.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.lazy.min.js"></script>
+    <script src="js/jquery.lazy.plugins.js"></script>
+
+    </script>
 
     <link rel="stylesheet" type="text/css" href="css/tooltipster.bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/tooltipster-sideTip-borderless.min.css"/>
@@ -20,6 +24,7 @@
 
     <main>
       <section class="map">
+        <h4>Select a region on the map</h4>
         <div class="primary-map">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           	 viewBox="0 0 800 506" enable-background="new 0 0 800 506" xml:space="preserve">
@@ -4247,9 +4252,10 @@
          var target = $(this).attr('rel');
          $("#"+target).show().siblings("div").hide();
          $("#info-"+target).show().siblings("div").hide();
+         $('.charts').lazy({
+            delay: 5000
+         });
        });
-
-
       });
     </script>
   </body>

@@ -8,6 +8,9 @@ body {
 h1 {
   font-weight: 700;
 }
+h4 {
+  margin: 10px 0 -40px;
+}
 
 .legend ul {
   display:block;

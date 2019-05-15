@@ -11,7 +11,8 @@ h1 {
   color: #44C1F1;
 }
 h4 {
-  margin: 10px 0 -20px;
+  margin: 10px 0 0px;
+  font-size: 0.8em;
 }
 
 .legend ul {
@@ -319,6 +320,10 @@ a:hover #middle-group, a.active #middle-group {
     margin: 0 auto;
     float: left;
     text-align: left;
+  }
+  h4 {
+    margin: 10px 0 -20px;
+    font-size: 1.2em;
   }
 }
 /****************** LAPTOPS ******************/

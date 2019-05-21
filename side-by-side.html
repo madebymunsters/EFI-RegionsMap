@@ -4240,22 +4240,38 @@
     </main>
     <script type="text/javascript">
       $(document).ready(function() {
-
-       $('.tooltip').tooltipster({
-        'maxWidth': 300,
-        theme: 'tooltipster-borderless',
-        contentAsHTML: true
+        $('.tooltip').tooltipster({
+          'maxWidth': 300,
+          theme: 'tooltipster-borderless',
+          contentAsHTML: true
         });
 
-       $(".primary-map a").click(function() {
-         $(this).addClass('active').siblings().removeClass('active');
-         var target = $(this).attr('rel');
-         $("#"+target).show().siblings("div").hide();
-         $("#info-"+target).show().siblings("div").hide();
-         $('.charts').lazy({
-            delay: 5000
-         });
-       });
+        $(".primary-map a").click(function() {
+          $(this).addClass('active').siblings().removeClass('active');
+          var target = $(this).attr('rel');
+          var targetDiv = '#' + target;
+
+          $(targetDiv + " .chart_1_mobile, " + targetDiv + " .chart_1, " + targetDiv + " .chart_2").each(function(idx, el) {
+            // console.log(`found element:`, el.id);
+            var candidateCharts = [];
+            Highcharts.charts.forEach(function(candidateChart) {
+              if (candidateChart && candidateChart.renderTo.id === el.id) {
+                // console.log(`found chart for id:`, el.id);
+                candidateCharts.push(candidateChart);
+              }
+            });
+
+            candidateCharts.forEach(function(oldChart) {
+              var renderTo = oldChart.renderTo;
+              var options = oldChart.options;
+
+              new Highcharts.Chart(renderTo, options);
+            });
+          });
+
+          $(targetDiv).show().siblings("div").hide();
+          $("#info-"+target).show().siblings("div").hide();
+        });
       });
     </script>
   </body>
